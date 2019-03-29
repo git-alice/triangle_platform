@@ -1,0 +1,12 @@
+jupyter notebook
+
+#https://github.com/bjodah/pyodesys
+pyodesys
+  scipy
+  pygslodeiv2
+    # зависит от gsl
+    # но этого не хватило -> apt-get install libgsl0-dev
+  pyodeint
+    # вроде даже ничего
+  pycvodes  
+

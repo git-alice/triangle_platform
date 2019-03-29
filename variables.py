@@ -6,20 +6,20 @@ from sympy import *
 # ИНИЦИАЛИЗАЦИЯ СИМВОЛОВ
 
 # Время
-t = symbols('t') 
+t = symbols('t')
 # Индексы
-i, P, C = symbols('i, P, C', cls=Idx) 
+i, P, C = symbols('i, P, C', cls=Idx)
 # (проекция вилки на e_z, проекция вилки на e_wheel, радиус, масса)
-h, d, r = symbols('h,d,r') 
+h, d, r = symbols('h,d,r')
 # Тензор инерции
-# J = symbols('J') # J = IndexedBase('J') 
+# J = symbols('J') # J = IndexedBase('J')
 # Углы
 psi=IndexedBase('psi');
 beta = IndexedBase('beta');
 alpha = symbols('alpha');
 theta = IndexedBase('theta');
 #моменты инерции
-W = IndexedBase('W'); T = IndexedBase('T') 
+W = IndexedBase('W'); T = IndexedBase('T')
 # элементы матрицы моментов инерций для разных тел (ВРЕМЕННО)
 a,b,c = symbols('a,b,c')
 
@@ -30,7 +30,7 @@ m = {}                                # словарь для масс
 e, omega, v = {}, {}, {}              # вектора, омега, скорость
 S, P, C, D  = {}, {}, {}, {}          # точки
 eq = {}                               # словарь со всякими выражениями
-delta = {};                           
+delta = {};
 nu = {}                               # псевдоскорости nu[1] и nu[2]
 A = {}                                # части уравнения Д'Аламбера лагранжа для разных тел
 velocity = {}                         # скорость
@@ -44,17 +44,19 @@ coeff = {}                            # коэффиценты у Д'Аламю�
 
 # Виртуальные перемещения
 delta['x'], delta['y'], delta['alpha'] = symbols('delta_x, delta_y, delta_alpha')
-delta['theta'] = IndexedBase('delta_theta') 
+delta['theta'] = IndexedBase('delta_theta')
 delta['psi'] = IndexedBase('delta_psi');
 # Псевдоскорости (взамен ẋ и ẏ)
-nu[1], nu[2] = symbols('nu1, nu2') 
+# nu[1], nu[2] = symbols('nu1, nu2')   !!!!!!!!!!!! НЕ ПОНЯТНО ЗАЧЕМ ЭТО БЫЛО
 m['platform'], m['wheel'] = symbols('m1, m2')
 
 
 #ЗАВИСИМОСТИ
 
-x = x(t); y = y(t); alpha = alpha(t);
-nu[1] = nu[1](t); nu[2] = nu[2](t);
+x = Function('x')(t); y = Function('y')(t); alpha = Function('alpha')(t);
+# nu[1] = nu[1](t); nu[2] = nu[2](t);
+nu[1] = Function('nu1')(t); nu[2] = Function('nu2')(t);
+
 
 
 
