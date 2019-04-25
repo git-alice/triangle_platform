@@ -8,6 +8,9 @@ from variables import *
 from structure import *
 
 
+from termcolor import cprint
+from pprint import pprint
+
 # Для записи и чтения уравнений
 
 
@@ -66,6 +69,14 @@ def print_all_variables(obj):
                 result = result.union(obj.find(Derivative(x, (t,1))))
             if obj.find(Derivative(x, (t,2))):
                 result = result.union(obj.find(Derivative(x, (t,2))))
-        print(result)
+        return result
     except Exception as e:
         print(e)
+
+
+def c_print(text, obj, pretty=False):
+    cprint('[' + text + '] ', 'red', end='');
+    if pretty:
+        pprint(obj)
+    else:
+        print(obj)
