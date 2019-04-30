@@ -26,6 +26,12 @@ def read_obj(obj_name, folder='data/'):
     with open(folder + obj_name + '.pickle', 'rb') as fobj:
         return pickle.load(fobj)
     
+def write_read_obg(obj, obj_name, calc):
+    if calc:
+        write_obj(obj, obj_name)
+    else:
+        read_obj(obj_name)
+        return obj
 
 def subs_init(eq):
     ''' '''
@@ -43,6 +49,7 @@ def subs_init(eq):
 
 def subs_for_ode(eq):
     ''' getting rid by arrays | alpha'' presents like (alpha1, alpha1') '''
+    print('Проверить чтобы это не заупскалось')
     nu1, nu2 = symbols('nu1, nu2')
     theta0, theta1, theta2 = symbols('theta0, theta1, theta2')
     psi0, psi1, psi2 = symbols('psi0, psi1, psi2')
@@ -72,6 +79,9 @@ def print_all_variables(obj):
         return result
     except Exception as e:
         print(e)
+
+def get_atoms(obj):
+    return obj.atoms()
 
 
 def c_print(text, obj, pretty=False):

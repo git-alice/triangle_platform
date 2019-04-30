@@ -5,238 +5,48 @@ point_S_velocity: скорость точки S
 point_P_velocity: скорость точки P
 point_C_velocity: скорость точки C
 point_D_velocity: скорость точки D
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
 diff(psi): 3 уравнения связей на diff(psi) = ...
 diff(theta): 3 уравнения связей на diff(theta) = ...
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
+diff(psi): 3 уравнения связей на diff(psi) = ...
+diff(theta): 3 уравнения связей на diff(theta) = ...
+diff(psi): 3 уравнения связей на diff(psi) = ...
+diff(theta): 3 уравнения связей на diff(theta) = ...
+diff(psi): 3 уравнения связей на diff(psi) = ...
+diff(theta): 3 уравнения связей на diff(theta) = ...
+diff(psi)(nu): 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
+diff(theta)(nu): 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
+diff(psi)(nu): 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
+diff(theta)(nu): 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
+ A[wheel]: Даламбер для колеса
+ A[fork]: Даламбер для вилки
+ A[platform]: Даламбер для платформы
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+all_dalamber: Даламбер для всего
+poly_dalamber: Даламбер для всего, полином
 dalamber_dx_coeff: коэффициент в уравнении Даламбера-Лагранжа при dx
 dalamber_dy_coeff: коэффициент в уравнении Даламбера-Лагранжа при dy
 dalamber_dalpha_coeff: коэффициент в уравнении Даламбера-Лагранжа при dAlpha
-vector_res_diff_eq_for: Вектор правых частей дифф уравнений на diff(nu1), diff(nu2), diff2(alpha)
-all_eq: Все десять уравнений в виде словаря.
-all_eq: Все десять уравнений в виде словаря с неподставленными параметрами.
-all_eq: Все десять уравнений в виде словаря с неподставленными параметрами.
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
+diff(psi)(nu): 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
+diff(theta)(nu): 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
+diff(psi)(nu): 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
+diff(theta)(nu): 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
+dalamber_dx_coeff_nu: коэффициент в уравнении Даламбера-Лагранжа при dx
+dalamber_dy_coeff_nu: коэффициент в уравнении Даламбера-Лагранжа при dy
+dalamber_dalpha_coeff_nu: коэффициент в уравнении Даламбера-Лагранжа при dAlpha
+dalamber_dx_coeff_nu: коэффициент в уравнении Даламбера-Лагранжа при dx
+dalamber_dy_coeff_nu: коэффициент в уравнении Даламбера-Лагранжа при dy
+dalamber_dalpha_coeff_nu: коэффициент в уравнении Даламбера-Лагранжа при dAlpha
 point_S_velocity: скорость точки S
 point_P_velocity: скорость точки P
 point_C_velocity: скорость точки C
 point_D_velocity: скорость точки D
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-dalamber_dx_coeff: коэффициент в уравнении Даламбера-Лагранжа при dx
-dalamber_dy_coeff: коэффициент в уравнении Даламбера-Лагранжа при dy
-dalamber_dalpha_coeff: коэффициент в уравнении Даламбера-Лагранжа при dAlpha
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-dalamber_dx_coeff: коэффициент в уравнении Даламбера-Лагранжа при dx
-dalamber_dy_coeff: коэффициент в уравнении Даламбера-Лагранжа при dy
-dalamber_dalpha_coeff: коэффициент в уравнении Даламбера-Лагранжа при dAlpha
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-dalamber_dx_coeff: коэффициент в уравнении Даламбера-Лагранжа при dx
-dalamber_dy_coeff: коэффициент в уравнении Даламбера-Лагранжа при dy
-dalamber_dalpha_coeff: коэффициент в уравнении Даламбера-Лагранжа при dAlpha
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-dalamber_dx_coeff: коэффициент в уравнении Даламбера-Лагранжа при dx
-dalamber_dy_coeff: коэффициент в уравнении Даламбера-Лагранжа при dy
-dalamber_dalpha_coeff: коэффициент в уравнении Даламбера-Лагранжа при dAlpha
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-dalamber_dx_coeff: коэффициент в уравнении Даламбера-Лагранжа при dx
-dalamber_dx_coeff: коэффициент в уравнении Даламбера-Лагранжа при dx
-dalamber_dy_coeff: коэффициент в уравнении Даламбера-Лагранжа при dy
-dalamber_dalpha_coeff: коэффициент в уравнении Даламбера-Лагранжа при dAlpha
-dalamber_dx_coeff: коэффициент в уравнении Даламбера-Лагранжа при dx
-dalamber_dy_coeff: коэффициент в уравнении Даламбера-Лагранжа при dy
-dalamber_dalpha_coeff: коэффициент в уравнении Даламбера-Лагранжа при dAlpha
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-angular_velocity_platform: угловая скорость платформы
-angular_velocity_fork: угловая скорость вилки
-angular_velocity_wheel: угловая скорость колеса
-point_S_velocity: скорость точки S
-point_P_velocity: скорость точки P
-point_C_velocity: скорость точки C
-point_D_velocity: скорость точки D
-diff(psi): 3 уравнения связей на diff(psi) = ...
-diff(theta): 3 уравнения связей на diff(theta) = ...
-diff(psi)_nu: 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
-diff(theta)_nu: 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
- A[wheel]: Даламбер для колеса
- A[fork]: Даламбер для вилки
- A[platform]: Даламбер для платформы
-dalamber_dx_coeff: коэффициент в уравнении Даламбера-Лагранжа при dx
-dalamber_dy_coeff: коэффициент в уравнении Даламбера-Лагранжа при dy
-dalamber_dalpha_coeff: коэффициент в уравнении Даламбера-Лагранжа при dAlpha

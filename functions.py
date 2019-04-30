@@ -54,6 +54,7 @@ def vec_by_2dots(dot_one, dot_two):
     except Exception as e:
         try:
             res_vec = getattr(structure, vec_name[::-1])
+            print('Обратный вектору {}?'.format(vec_name))
         except Exception as e:
             cprint('Такого вектора не задано','red')
             print(e)
@@ -67,16 +68,35 @@ def subs_delta(eq):
         Derivative(theta[i],t), delta['theta'][i])
 
 
+def dalamber_subs(obj, eq):
+    """ subs delta_psi delta_theta """
+    return lambda i: obj(i).\
+        subs(delta['psi'][i], eq['diff(psi)'](i)).\
+        subs(delta['theta'][i], eq['diff(theta)'](i))
+
+
+def dalamber_subs_nu(obj, eq):
+    for i in range(3):
+        obj = obj.\
+        subs(Derivative(psi[i], t, 2), eq['diff(psi)_nu'](i).diff(t)).\
+        subs(Derivative(psi[i], t, 2), eq['diff(psi)_nu'](i).diff(t)).\
+        subs(Derivative(psi[i], t), eq['diff(psi)_nu'](i)).\
+        subs(Derivative(theta[i], t), eq['diff(theta)_nu'](i))
+    return obj
+
+
 def euler(dot_one, dot_two):
     '''уравнение эйлера по 2 точкам для первой точки'''
     if dot_one == dot_two:
         cprint('Уравнениу Эйлера для одной точки', 'red')
-    return lambda i: v[fkey(dot_two)](i) + cross(
-                                                 omega[intersection(dot_one, dot_two)[0]](i),
+    return lambda i: v[dot_two['name']](i) + cross(omega[intersection(dot_one, dot_two)[0]](i),
                                                  vec_by_2dots(dot_one, dot_two)(i))
 
 
 def dalamber(mass, velocity, F, delta_r, K, M, omega_delta):
     '''Д'Аламбера - Лагранжа'''
-    dalamber = lambda i: scalar((mass*velocity(i).diff(t) + F(i)), delta_r(i)) + scalar(K(i).diff(t) + M(i), omega_delta(i)) 
+    dalamber = lambda i: scalar((mass*velocity(i).diff(t) - \
+                                F(i)), delta_r(i)) + \
+                         scalar(K(i).diff(t) - \
+                                M(i), omega_delta(i)) 
     return dalamber

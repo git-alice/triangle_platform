@@ -1,6 +1,6 @@
-from sympy.abc import *
-from sympy import *
-
+import sympy.abc 
+from sympy import symbols, IndexedBase, Function
+from sympy.physics.vector import dynamicsymbols
 
 
 # ИНИЦИАЛИЗАЦИЯ СИМВОЛОВ
@@ -8,18 +8,21 @@ from sympy import *
 # Время
 t = symbols('t')
 # Индексы
-i, P, C = symbols('i, P, C', cls=Idx)
+# i, P, C = symbols('i, P, C', cls=Idx) # i, P и С ???
 # (проекция вилки на e_z, проекция вилки на e_wheel, радиус, масса)
 h, d, r = symbols('h,d,r')
 # Тензор инерции
 # J = symbols('J') # J = IndexedBase('J')
 # Углы
-psi=IndexedBase('psi');
-beta = IndexedBase('beta');
-alpha = symbols('alpha');
-theta = IndexedBase('theta');
+psi0, psi1, psi2 = dynamicsymbols('psi0, psi1, psi2')
+beta0, beta1, beta2 = dynamicsymbols('beta0, beta1, beta2')
+theta0, theta1, theta2 = dynamicsymbols('theta0, theta1, theta2')
+psi = [psi0, psi1, psi2]
+beta = [beta0, beta1, beta2]
+theta = [theta0, theta1, theta2]
+
 #моменты инерции
-W1, W2, W3 = symbols('W1, W2, W3'); T1, T2, T3 = symbols('T1, T2, T3')
+W1, W2, W3 = dynamicsymbols('W1, W2, W3'); T1, T2, T3 = dynamicsymbols('T1, T2, T3')
 T = {
     1: T1,
     2: T2,
@@ -40,6 +43,7 @@ a,b,c = symbols('a,b,c')
 m = {}                                # словарь для масс
 e, omega, v = {}, {}, {}              # вектора, омега, скорость
 S, P, C, D  = {}, {}, {}, {}          # точки
+points = {}
 eq = {}                               # словарь со всякими выражениями
 delta = {};
 nu = {}                               # псевдоскорости nu[1] и nu[2]
@@ -53,20 +57,20 @@ F = {}                                # силы, действующие на т
 omega_delta = {}                      # виртуальны поворот
 coeff = {}                            # коэффиценты у Д'Аламюера-Лагранжа
 
+# Думаю здесь проблем не должно возникнуть, НО МАЛО ЛИ
 # Виртуальные перемещения
 delta['x'], delta['y'], delta['alpha'] = symbols('delta_x, delta_y, delta_alpha')
-delta['theta'] = IndexedBase('delta_theta')
-delta['psi'] = IndexedBase('delta_psi');
+delta_theta0, delta_theta1, delta_theta2 = dynamicsymbols('delta_theta0, delta_theta1, delta_theta2')
+delta_psi0, delta_psi1, delta_psi2 = dynamicsymbols('delta_psi0, delta_psi1, delta_psi2')
+delta['theta'] = [delta_theta0, delta_theta1, delta_theta2]
+delta['psi'] = [delta_psi0, delta_psi1, delta_psi2];
 # Псевдоскорости (взамен ẋ и ẏ)
-# nu[1], nu[2] = symbols('nu1, nu2')   !!!!!!!!!!!! НЕ ПОНЯТНО ЗАЧЕМ ЭТО БЫЛО
 m['platform'], m['wheel'] = symbols('m1, m2')
 
 
 #ЗАВИСИМОСТИ
-
-x = Function('x')(t); y = Function('y')(t); alpha = Function('alpha')(t);
-# nu[1] = nu[1](t); nu[2] = nu[2](t);
-nu[1] = Function('nu1')(t); nu[2] = Function('nu2')(t);
+x, y, alpha = dynamicsymbols('x, y, alpha')
+nu[1], nu[2] = dynamicsymbols('nu1, nu2')
 
 
 
