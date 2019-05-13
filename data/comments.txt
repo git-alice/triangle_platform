@@ -50,3 +50,76 @@ point_S_velocity: �������� ����� S
 point_P_velocity: �������� ����� P
 point_C_velocity: �������� ����� C
 point_D_velocity: �������� ����� D
+angular_velocity_platform: угловая скорость платформы
+angular_velocity_fork: угловая скорость вилки
+angular_velocity_wheel: угловая скорость колеса
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+diff(psi): 3 уравнения связей на diff(psi) = ...
+diff(theta): 3 уравнения связей на diff(theta) = ...
+diff(psi)(nu): 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
+diff(theta)(nu): 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
+angular_velocity_platform: угловая скорость платформы
+angular_velocity_fork: угловая скорость вилки
+angular_velocity_wheel: угловая скорость колеса
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+angular_velocity_platform: угловая скорость платформы
+angular_velocity_fork: угловая скорость вилки
+angular_velocity_wheel: угловая скорость колеса
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+point_S_velocity: скорость точки S
+point_P_velocity: скорость точки P
+point_C_velocity: скорость точки C
+point_D_velocity: скорость точки D
+diff(psi): 3 уравнения связей на diff(psi) = ...
+diff(theta): 3 уравнения связей на diff(theta) = ...
+diff(psi)(nu): 3 уравнения связей на diff(psi) = ..., только уже от nu1 и nu2
+diff(theta)(nu): 3 уравнения связей на diff(theta) = ..., только уже от nu1 и nu2
