@@ -13,7 +13,7 @@ import utils
 from ode_utils import numerical_solver
 from pyodesys.symbolic import SymbolicSys
 import plotly.graph_objs as go
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+# from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import plotly.plotly as py
 
 def data_for_plotly(*args):
@@ -24,12 +24,12 @@ def data_for_plotly(*args):
             y = arg['y'],
             mode = 'lines',
             name = arg['name']))
-
     return data
 
 def get_shapes(df, n):
     shapes = []
-    for i in range(0, len(df.x), n):
+    length = len(df.x)
+    for i in range(0, length, n):
         i = int(i)
 #       треуголники
         shapes.append({
@@ -41,7 +41,7 @@ def get_shapes(df, n):
                 'x1': df.x.iloc[i] + df.SP1x.iloc[i],
                 'y1': df.y.iloc[i] + df.SP1y.iloc[i],
                 'line': {
-                    'color': 'rgb(191, 63, 63)',
+                    'color': 'rgba(191, 63, 63, {})'.format(1 - i/length),
                     'width': 1,
                 }})
         shapes.append({
@@ -53,7 +53,7 @@ def get_shapes(df, n):
                 'x1': df.x.iloc[i] + df.SP2x.iloc[i],
                 'y1': df.y.iloc[i] + df.SP2y.iloc[i],
                 'line': {
-                    'color': 'rgb(63, 191, 191)',
+                    'color': 'rgba(63, 191, 191, {})'.format(1 - i/length),
                     'width': 1,
                 }})
         shapes.append({
@@ -65,7 +65,7 @@ def get_shapes(df, n):
                 'x1': df.x.iloc[i] + df.SP0x.iloc[i],
                 'y1': df.y.iloc[i] + df.SP0y.iloc[i],
                 'line': {
-                    'color': 'rgb(63, 191, 127)',
+                    'color': 'rgba(63, 191, 127, {})'.format(1 - i/length),
                     'width': 1,
                 }})
 
@@ -79,8 +79,8 @@ def get_shapes(df, n):
                 'x1': df.x.iloc[i] + df.SP0x.iloc[i] + df.PC0x.iloc[i],
                 'y1': df.y.iloc[i] + df.SP0y.iloc[i] + df.PC0y.iloc[i],
                 'line': {
-                    'color': 'rgb(22, 100, 130)',
-                    'width': 1,
+                    'color': 'rgba(22, 100, 130, {})'.format(1 - i/length),
+                    'width': 2,
                 }})
         shapes.append({
                 'type': 'line',
@@ -91,8 +91,8 @@ def get_shapes(df, n):
                 'x1': df.x.iloc[i] + df.SP1x.iloc[i] + df.PC1x.iloc[i],
                 'y1': df.y.iloc[i] + df.SP1y.iloc[i] + df.PC1y.iloc[i],
                 'line': {
-                    'color': 'rgb(22, 100, 130)',
-                    'width': 1,
+                    'color': 'rgba(22, 100, 130, {})'.format(1 - i/length),
+                    'width': 2,
                 }})
         shapes.append({
                 'type': 'line',
@@ -103,8 +103,8 @@ def get_shapes(df, n):
                 'x1': df.x.iloc[i] + df.SP2x.iloc[i] + df.PC2x.iloc[i],
                 'y1': df.y.iloc[i] + df.SP2y.iloc[i] + df.PC2y.iloc[i],
                 'line': {
-                    'color': 'rgb(22, 100, 130)',
-                    'width': 1,
+                    'color': 'rgba(22, 100, 130, {})'.format(1 - i/length),
+                    'width': 2,
                 }})
     return shapes
 
@@ -255,7 +255,7 @@ def calc(eq_x, eq_y, eq_alpha, initial_conditions, params, t_end):
     eq['nu2'] = -sin(alpha)*diff(x) + cos(alpha)*diff(y)
 
     # nu1(alpha, x, y) -> nu1(t); nu2(alpha, x, y) -> nu2(t)
-    for i in range(1,3):
+    for i in range(1,3)pi/12:
         eq['nu' + str(i)] = eq['nu' + str(i)].subs({x: eq['x'],
                                                     y: eq['y'],
                                                     Derivative(alpha, t): eq['dot(alpha)'],

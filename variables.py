@@ -15,7 +15,7 @@ h, d, r = symbols('h,d,r')
 # J = symbols('J') # J = IndexedBase('J')
 # Углы
 psi0, psi1, psi2 = dynamicsymbols('psi0, psi1, psi2')
-beta0, beta1, beta2 = dynamicsymbols('beta0, beta1, beta2')
+beta0, beta1, beta2 = symbols('beta0, beta1, beta2')
 theta0, theta1, theta2 = dynamicsymbols('theta0, theta1, theta2')
 psi = [psi0, psi1, psi2]
 beta = [beta0, beta1, beta2]
